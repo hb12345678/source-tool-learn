@@ -25,6 +25,7 @@ public class TestController {
 
     @GetMapping("/hhh")
     public PageInfo<Person> getName(int pageNum,int pageSize) {
+        String name ="hhhhh";
         PageHelper.startPage(pageNum,pageSize);
         List<Person> persons = testService.getCount();
         PageInfo<Person> person = new PageInfo(persons);
