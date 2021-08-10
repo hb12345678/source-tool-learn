@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--绑定一个mapper接口-->
+<mapper namespace="com.huangbei.testproject.Dao.TestMapper">
+
+    <!--结果集映射-->
+    <resultMap id="BaseResultMap" type="com.huangbei.testproject.Entity.Person">
+        <!--column是数据库字段,property是实体类的属性-->
+        <result column="DUMP_NAME" property="dumpName"/>
+        <result column="DUMP_AGE" property="dumpAge"/>
+    </resultMap>
+
+    <select id="getCount" resultMap="BaseResultMap">
+        select * from person
+    </select>
+
+
+</mapper>
